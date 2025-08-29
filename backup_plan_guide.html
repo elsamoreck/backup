@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Be Her Backup Plan - The First Choice System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            min-height: 100vh;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #dc2626, #000000, #dc2626);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+        }
+
+        .elite-badge {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.9;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .value-prop {
+            font-size: 1.1em;
+            color: #dc2626;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            padding: 70px 60px;
+        }
+
+        .hook-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hook-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+        }
+
+        .hook-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hook-text {
+            font-size: 1.5em;
+            font-style: italic;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reality-check {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .reality-item {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .reality-number {
+            font-size: 3em;
+            font-weight: 900;
+            color: #dc2626;
+            display: block;
+        }
+
+        .reality-label {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .strategy {
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            border: 2px solid #f0f0f0;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .strategy:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            border-color: #dc2626;
+        }
+
+        .strategy-number {
+            position: absolute;
+            top: -15px;
+            left: 40px;
+            background: #dc2626;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.1em;
+        }
+
+        .strategy h3 {
+            color: #1a1a1a;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            margin-top: 10px;
+        }
+
+        .strategy-subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .scenario-box {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scenario-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5em;
+            opacity: 0.4;
+        }
+
+        .scenario-box h4 {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .psychology-section {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #dc2626;
+        }
+
+        .psychology-section h4 {
+            color: #1a1a1a;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .psychology-section p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .psychology-section strong {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .mindset-shift {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-style: italic;
+            border-left: 4px solid #dc2626;
+        }
+
+        .implementation {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .implementation::before {
+            content: 'ACTION PROTOCOL';
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            background: #1a1a1a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .implementation h4 {
+            color: #1a1a1a;
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .implementation-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .implementation-steps li {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            padding-left: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .implementation-steps li:hover {
+            border-color: #dc2626;
+            transform: translateX(5px);
+        }
+
+        .implementation-steps li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9em;
+        }
+
+        .power-move {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid #f59e0b;
+            position: relative;
+        }
+
+        .power-move::before {
+            content: '🔥 POWER MOVE';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #f59e0b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        .section {
+            margin-bottom: 70px;
+        }
+
+        .section h2 {
+            font-size: 2.8em;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 900;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #b91c1c);
+            border-radius: 2px;
+        }
+
+        .warning-zone {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .warning-zone::before {
+            content: '🚨';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            opacity: 0.3;
+        }
+
+        .warning-zone h4 {
+            color: #dc2626;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .warning-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .warning-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .warning-list li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            opacity: 0.8;
+        }
+
+        .transformation-system {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transformation-system::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+        }
+
+        .transformation-system h3 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+        }
+
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .system-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .system-item h4 {
+            color: #dc2626;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .key-quote {
+            font-size: 1.8em;
+            font-style: italic;
+            font-weight: 700;
+            margin: 50px 0;
+            text-align: center;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 3px solid #dc2626;
+            position: relative;
+        }
+
+        .key-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 4em;
+            color: #dc2626;
+            opacity: 0.3;
+        }
+
+        .closer-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: white;
+            padding: 60px 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .closer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+        }
+
+        .closer-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+        }
+
+        .closer-section h2::after {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .guarantee-box {
+            background: #dc2626;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                border-radius: 15px;
+            }
+            
+            .header, .content {
+                padding: 40px 30px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .hook-section, .strategy, .implementation {
+                padding: 30px 25px;
+            }
+            
+            .section h2 {
+                font-size: 2.2em;
+            }
+
+            .reality-check {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .system-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-indicator {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .exclusive-content {
+            border: 2px solid #dc2626;
+            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .exclusive-content::before {
+            content: 'MASTER CLASS';
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            background: #dc2626;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="elite-badge">FIRST CHOICE SYSTEM</div>
+            <h1 class="fade-in">Never Be Her Backup Plan</h1>
+            <p class="subtitle fade-in">The Complete Guide to Commanding Respect & Becoming Every Woman's Priority</p>
+            <p class="value-prop">Stop Being an Option. Start Being THE Choice.</p>
+        </div>
+
+        <div class="content">
+            <div class="hook-section fade-in">
+                <h2>The Backup Plan Epidemic</h2>
+                <p class="hook-text">You deserve better than being her 11 PM text when she's bored and everyone else is unavailable.</p>
+                
+                <div class="reality-check">
+                    <div class="reality-item">
+                        <span class="reality-number">78%</span>
+                        <span class="reality-label">Of men accept backup status without realizing it</span>
+                    </div>
+                    <div class="reality-item">
+                        <span class="reality-number">11PM</span>
+                        <span class="reality-label">The time backup plans get contacted</span>
+                    </div>
+                </div>
+                
+                <p style="font-size: 1.3em; margin-top: 30px; opacity: 0.9; position: relative; z-index: 2;">If you're always available, always accommodating, and never setting boundaries, you're teaching women that your time has no value.</p>
+                <p style="font-size: 1.2em; margin-top: 20px; opacity: 0.8; position: relative; z-index: 2;">Today, that changes forever.</p>
+            </div>
+
+            <div class="exclusive-content">
+                <h3 style="color: #dc2626; font-size: 1.5em; margin-bottom: 20px;">The Truth About Female Psychology</h3>
+                <p style="font-size: 1.1em; line-height: 1.7;">Women don't respect what they can easily obtain. The moment you become too available, too accommodating, too eager to please, you signal low value. This system teaches you how to flip the script and make her work to keep YOUR attention.</p>
+            </div>
+
+            <div class="section fade-in">
+                <h2>The 6 First Choice Strategies</h2>
+
+                <div class="strategy">
+                    <div class="strategy-number">1</div>
+                    <h3>Eliminate Convenience Culture <span class="success-indicator">Game Changer</span></h3>
+                    <p class="strategy-subtitle">Stop being her entertainment when she's bored</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Backup Signal</h4>
+                        <p style="font-size: 1.1em;">She only texts you at 11 PM: "Hey, what are you up to?"</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She reaches out when her other plans fall through</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She disappears for days, then suddenly needs attention</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 The Psychology Behind Late Night Texts</h4>
+                        <p>When she texts you at 11 PM, she's treating you like her <strong>Emotional Vending Machine</strong> - available 24/7 to dispense attention, validation, or entertainment on demand. This behavior patterns her brain to see you as a convenience, not a priority.</p>
+                        <p><strong>The Brutal Truth:</strong> If she valued your time and attention, she'd plan ahead to spend it with you, not reach out as an afterthought when everyone else is busy.</p>
+                        
+                        <div class="mindset-shift">
+                            "Your availability should be earned, not assumed. High-value women plan to see you. Low-value women text you when bored."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Convenience Elimination Protocol</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>Set Communication Windows:</strong> Only respond to messages between 10 AM - 9 PM. Late night texts get ignored until morning, when you respond: "Just saw this. I don't check my phone after 9 PM."</li>
+                            <li><strong>Create Response Delays:</strong> Even during your communication window, don't respond instantly. Wait 2-3 hours minimum. Show that you have a life that doesn't revolve around her notifications.</li>
+                            <li><strong>Qualify Her Timing:</strong> When she texts at inappropriate hours, address it directly: "I notice you tend to reach out pretty late. I'm usually winding down by then. What's your schedule like earlier in the day?"</li>
+                            <li><strong>Offer Alternatives:</strong> "I'd love to chat, but I prefer phone calls over texting. When would be a good time to actually talk?"</li>
+                            <li><strong>Track Patterns:</strong> Notice if she only contacts you when she needs something or when she's bored. Document this behavior and address it directly.</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>Power Move:</strong> When she texts at 11 PM, screenshot it and respond the next morning: "I see you were up late thinking about me. Let's grab coffee this week and you can tell me what was on your mind."</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Fatal Mistakes That Keep You in Backup Status</h4>
+                        <ul class="warning-list">
+                            <li>Responding to every late night text immediately because you're "being nice"</li>
+                            <li>Making excuses for her poor timing ("She's probably just busy during the day")</li>
+                            <li>Being available whenever she needs emotional support but never demanding the same</li>
+                            <li>Accepting breadcrumb communication instead of requiring real conversation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">2</div>
+                    <h3>Master Strategic Unavailability <span class="success-indicator">Tested Method</span></h3>
+                    <p class="strategy-subtitle">Make your time valuable by making it scarce</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Last-Minute Test</h4>
+                        <p style="font-size: 1.1em;">"Want to hang out tonight?" (It's 4 PM on a Tuesday)</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">"Are you free this weekend?" (It's Friday afternoon)</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">"Let's do something!" (No specific time, date, or activity)</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 Why Last-Minute Plans Signal Low Value</h4>
+                        <p>When you accept last-minute plans, you're communicating that your schedule is empty and your time has no value. You're essentially saying: <strong>"I have nothing better to do than wait around for your spontaneous availability."</strong></p>
+                        <p><strong>Psychological Impact:</strong> Women unconsciously categorize men based on availability. Scarce = valuable. Always available = disposable backup option.</p>
+                        
+                        <div class="mindset-shift">
+                            "A man with options requires notice. A man without options accepts scraps."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Strategic Unavailability System</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>The 48-Hour Rule:</strong> Never accept plans with less than 48 hours notice unless it's a genuine emergency. Response: "I'd love to, but I'm busy tonight. How about Thursday at 7?"</li>
+                            <li><strong>Propose Specific Alternatives:</strong> Don't just say no - offer a concrete alternative that shows you're interested but have standards. "I can't do tonight, but I'm free Saturday at 2 PM for coffee."</li>
+                            <li><strong>Book Your Calendar:</strong> Actually fill your schedule with gym sessions, friend hangouts, hobbies, and personal projects. Your unavailability must be authentic, not manufactured.</li>
+                            <li><strong>Communicate Your Standards:</strong> "I like to plan ahead for things I'm excited about. Last-minute works for emergencies, but I prefer to give good experiences the time they deserve."</li>
+                            <li><strong>Test Her Investment:</strong> If she really wants to see you, she'll wait for your available time. If she disappears when you're not instantly available, she was never that interested.</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>Advanced Strategy:</strong> When she proposes last-minute plans, counter with: "I wish I could, but I already committed to [specific activity]. I hate disappointing people. Let's plan something for next week that we can both look forward to."</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Availability Mistakes That Destroy Your Value</h4>
+                        <ul class="warning-list">
+                            <li>Canceling existing plans to accommodate her last-minute requests</li>
+                            <li>Always being the one to suggest alternative times when she's unavailable</li>
+                            <li>Making yourself available for her schedule while she never accommodates yours</li>
+                            <li>Accepting vague plans without specific times and activities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">3</div>
+                    <h3>Establish Non-Negotiable Standards <span class="success-indicator">Respect Builder</span></h3>
+                    <p class="strategy-subtitle">Create clear boundaries for how you expect to be treated</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Respect Test Scenarios</h4>
+                        <p style="font-size: 1.1em;">She cancels plans twice without offering to reschedule</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She consistently shows up 20+ minutes late without apology</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She flakes on plans with 30 minutes notice</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She's always on her phone when you're together</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 How Standards Create Attraction</h4>
+                        <p>Women are attracted to men who have <strong>Self-Respect Standards</strong>. When you tolerate disrespectful behavior, you signal that you don't value yourself highly. This creates a psychological response where she unconsciously devalues you too.</p>
+                        <p><strong>The Respect Equation:</strong> How much someone respects you is directly proportional to how much you respect yourself. If you accept cancellations without consequences, late arrivals without acknowledgment, and phone distractions without addressing them, you're teaching her that your time and feelings don't matter.</p>
+                        
+                        <div class="mindset-shift">
+                            "You teach people how to treat you by what you accept. Silence in the face of disrespect is permission to continue."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Standards Enforcement Framework</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>Define Your Non-Negotiables:</strong> Write down 5 behaviors you won't tolerate: chronic lateness, last-minute cancellations, phone addiction during dates, flaking without rescheduling, disrespectful communication.</li>
+                            <li><strong>The Two-Strike System:</strong> First offense gets a calm, direct address: "I noticed you were on your phone quite a bit tonight. When I'm with someone, I like to focus on them completely." Second offense gets consequences.</li>
+                            <li><strong>Implement Natural Consequences:</strong> If she cancels twice without rescheduling, stop initiating plans. If she's consistently late, leave after 15 minutes. Actions speak louder than lectures.</li>
+                            <li><strong>Communicate Standards Early:</strong> "I really value punctuality. If either of us is running late, let's just shoot a quick text." Set expectations proactively, not reactively.</li>
+                            <li><strong>Follow Through Consistently:</strong> Your standards are only as strong as your willingness to enforce them. Empty threats destroy your credibility faster than having no standards at all.</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>The Standard-Setting Script:</strong> "I've noticed [specific behavior]. I really value [your standard] in my relationships. Going forward, I need [specific expectation]. Can we be on the same page about this?"</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Standards Mistakes That Backfire</h4>
+                        <ul class="warning-list">
+                            <li>Setting standards you're not willing to enforce consistently</li>
+                            <li>Making threats instead of implementing natural consequences</li>
+                            <li>Having double standards - expecting from her what you don't give</li>
+                            <li>Being overly rigid about minor issues while ignoring major red flags</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">4</div>
+                    <h3>Maintain Active Options <span class="success-indicator">Freedom Keeper</span></h3>
+                    <p class="strategy-subtitle">Keep your options open until she closes them</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Options Reality Check</h4>
+                        <p style="font-size: 1.1em;">You stop talking to other women after a great first date</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">You delete dating apps after she shows interest</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">You turn down other opportunities "out of respect"</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She's still active on dating apps while you've gone exclusive</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 The Psychology of Abundance vs. Scarcity</h4>
+                        <p>When you prematurely eliminate your options, you shift into <strong>Scarcity Mindset</strong> - acting desperate, needy, and afraid of losing the one option you have left. This energy is repulsive to women because it signals low value and limited options.</p>
+                        <p><strong>The Abundance Principle:</strong> Women are attracted to men who have choices because it indicates that other women find them desirable. The moment you become her only option while she remains yours, the power dynamic shifts completely in her favor.</p>
+                        
+                        <div class="mindset-shift">
+                            "Until she chooses to be exclusive with you, you haven't chosen to be exclusive with her. Options create attraction, desperation destroys it."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Options Management System</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>The Exclusivity Requirement:</strong> Continue dating other women until she explicitly asks for exclusivity AND demonstrates consistent behavior worthy of it. "I'd love to focus on just us. How do you feel about that?"</li>
+                            <li><strong>Maintain Social Proof:</strong> Keep your social media active, continue going out with friends, and don't hide the fact that you're an attractive man with options. You're not cheating; you're being honest about your single status.</li>
+                            <li><strong>The Three-Date Rule:</strong> Never eliminate other options based on potential. She earns exclusivity through consistent actions over time, not through promising words or great chemistry.</li>
+                            <li><strong>Communicate Honestly:</strong> If asked about other people, be honest: "I'm single and I date. When I meet someone special who wants to be exclusive, that changes. But that's a conversation for people who are ready for it."</li>
+                            <li><strong>Quality Over Quantity:</strong> This isn't about being a player; it's about maintaining your freedom until someone earns the right to your exclusive attention through their actions and commitment.</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>The Options Qualification:</strong> "I'm looking for someone who's as excited about building something real as I am. Actions show me that more than words do."</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Options Mistakes That Kill Attraction</h4>
+                        <ul class="warning-list">
+                            <li>Going exclusive before she does or asks you to</li>
+                            <li>Lying about other women instead of being honestly single</li>
+                            <li>Using other women to make her jealous rather than maintaining genuine options</li>
+                            <li>Eliminating options based on potential rather than proven commitment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">5</div>
+                    <h3>Refuse to Wait for Clarity <span class="success-indicator">Time Saver</span></h3>
+                    <p class="strategy-subtitle">Stop being patient with women who are confused about you</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Waiting Game Red Flags</h4>
+                        <p style="font-size: 1.1em;">"I need time to figure out what I want"</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">"I'm not ready for anything serious right now"</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">"Let's just see where this goes"</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">"I don't want to ruin our friendship"</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 What "Figuring Things Out" Really Means</h4>
+                        <p>When a woman says she needs to "figure things out," she's not confused - she's <strong>buying time to see if something better comes along</strong>. She's keeping you in her back pocket while she explores other options. You've become her safety net, not her first choice.</p>
+                        <p><strong>The Clarity Truth:</strong> When women want a man, there's no confusion. They find time, make effort, and create opportunities to be with him. Confusion is just politeness covering up disinterest or using you as a backup plan.</p>
+                        
+                        <div class="mindset-shift">
+                            "While you're waiting for her to figure things out, she's probably figuring out someone else. Don't be patient with people who are unclear about your value."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Clarity Demand Protocol</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>Set Clear Timelines:</strong> "I understand you need to think about it. Take the time you need, but I'm not going to wait indefinitely. Let's revisit this next week." Give her a deadline, then stick to it.</li>
+                            <li><strong>The Direct Approach:</strong> "I'm interested in building something real with someone who's excited about building it with me. If that's not you, that's okay, but let's be clear about where we stand."</li>
+                            <li><strong>Stop Providing Boyfriend Benefits:</strong> No more emotional support, constant texting, or relationship-level attention until she provides girlfriend-level commitment. Match her energy and investment exactly.</li>
+                            <li><strong>The Ultimatum Alternative:</strong> Instead of ultimatums, simply redirect your energy. "I hear you. I'm going to focus my attention on people who are excited about spending time with me."</li>
+                            <li><strong>Walk Away Gracefully:</strong> "I respect that you need time to figure things out. I'm going to give you that space and focus on other things. Reach out when you have clarity."</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>The Clarity Test:</strong> "I don't chase people who are unsure about me. When you know what you want, you know where to find me."</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Waiting Game Mistakes That Waste Your Life</h4>
+                        <ul class="warning-list">
+                            <li>Waiting months for someone to "figure out" something that should be obvious</li>
+                            <li>Continuing to provide emotional support to someone who won't commit</li>
+                            <li>Making excuses for her confusion instead of accepting her disinterest</li>
+                            <li>Believing that patience will eventually be rewarded with commitment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">6</div>
+                    <h3>Confront Disrespect Immediately <span class="success-indicator">Respect Enforcer</span></h3>
+                    <p class="strategy-subtitle">Address problems the moment they occur</p>
+                    
+                    <div class="scenario-box">
+                        <h4>Common Disrespect Patterns</h4>
+                        <p style="font-size: 1.1em;">She interrupts you consistently during conversations</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She makes jokes at your expense in front of others</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She dismisses your opinions or feelings</p>
+                        <p style="font-size: 1.1em; margin-top: 10px;">She checks out other guys while you're together</p>
+                    </div>
+
+                    <div class="psychology-section">
+                        <h4>🧠 Why Immediate Confrontation Works</h4>
+                        <p>Disrespect that goes unaddressed becomes <strong>normalized behavior</strong>. Each time you let something slide, you're unconsciously giving her permission to treat you that way. Women test boundaries constantly - not out of malice, but to see if you have any.</p>
+                        <p><strong>The Respect Training:</strong> You literally train people how to treat you through your responses to their behavior. Immediate, calm confrontation shows that you have self-respect and won't accept anything less than mutual respect.</p>
+                        
+                        <div class="mindset-shift">
+                            "Silence in the face of disrespect is not keeping the peace - it's surrendering your self-respect."
+                        </div>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Immediate Response Framework</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>The Pause and Address:</strong> The moment disrespectful behavior occurs, pause the conversation. "Hold on, let me finish my thought" or "That comment felt disrespectful. Let's address that."</li>
+                            <li><strong>Use "I" Statements:</strong> "I don't appreciate being interrupted" rather than "You always interrupt me." Focus on the behavior, not character assassination.</li>
+                            <li><strong>Stay Calm and Direct:</strong> Lower your voice, maintain eye contact, speak slowly. Your calm confidence in addressing it shows strength, not aggression.</li>
+                            <li><strong>Require Acknowledgment:</strong> "Do you understand why that was disrespectful?" Don't move forward until she acknowledges the behavior and agrees to change it.</li>
+                            <li><strong>Follow Through:</strong> If the same behavior happens again, implement consequences. "We talked about this. I'm going to head out now. Call me when you're ready to be respectful."</li>
+                        </ol>
+
+                        <div class="power-move">
+                            <p><strong>The Respect Script:</strong> "I need to stop you there. The way you just spoke to me isn't okay. I don't talk to you that way, and I won't accept being talked to that way. Are we clear?"</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-zone">
+                        <h4>Confrontation Mistakes That Backfire</h4>
+                        <ul class="warning-list">
+                            <li>Waiting until you're angry to address issues instead of handling them immediately</li>
+                            <li>Attacking her character instead of addressing specific behavior</li>
+                            <li>Making threats you won't follow through on</li>
+                            <li>Letting things slide "to keep the peace" until resentment builds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-quote fade-in">
+                "The moment you demand to be someone's first choice is the moment you become worth choosing."
+            </div>
+
+            <div class="transformation-system fade-in">
+                <h3>The First Choice Transformation System</h3>
+                <p style="font-size: 1.2em; text-align: center; margin-bottom: 40px; position: relative; z-index: 2;">How to implement all 6 strategies and transform from backup to priority</p>
+                
+                <div class="system-grid">
+                    <div class="system-item">
+                        <h4>Week 1-2: Foundation Building</h4>
+                        <p>Implement communication windows and response delays. Start enforcing the 48-hour rule for plans. Begin documenting disrespectful behavior patterns to address.</p>
+                    </div>
+                    <div class="system-item">
+                        <h4>Week 3-4: Standards Implementation</h4>
+                        <p>Define your non-negotiables and communicate them clearly. Start addressing disrespectful behavior immediately. Continue maintaining your options and social life.</p>
+                    </div>
+                    <div class="system-item">
+                        <h4>Week 5-6: Consistency Enforcement</h4>
+                        <p>Follow through on all boundaries and consequences. Stop providing boyfriend benefits without girlfriend commitment. Demand clarity from women who are "figuring things out."</p>
+                    </div>
+                    <div class="system-item">
+                        <h4>Week 7+: Mastery Maintenance</h4>
+                        <p>Consistently apply all strategies automatically. Attract women who respect your standards from the beginning. Eliminate time-wasters quickly and efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="exclusive-content" style="margin-top: 40px; position: relative; z-index: 2;">
+                    <h4 style="color: #dc2626; font-size: 1.3em; margin-bottom: 20px;">The First Choice Guarantee</h4>
+                    <p style="font-size: 1.1em; line-height: 1.7;">Apply these 6 strategies consistently for 30 days. Any woman who doesn't adjust her behavior to meet your standards wasn't worth your time anyway. The ones who do will treat you like the priority you've always deserved to be.</p>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>Advanced Implementation Mastery</h2>
+
+                <div class="implementation">
+                    <h4>The Daily First Choice Routine</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>Morning Standard Check:</strong> Review your calendar and commitments. Ensure you're not being overly available or accommodating to women who haven't earned it.</li>
+                        <li><strong>Communication Audit:</strong> Check messages and respond only during your designated windows. Notice patterns of when different women reach out to you.</li>
+                        <li><strong>Option Maintenance:</strong> Spend time on activities and with people who value your time. Keep your social calendar full with meaningful activities.</li>
+                        <li><strong>Evening Reflection:</strong> Did you enforce your standards today? Did you accept any disrespectful behavior? What will you adjust tomorrow?</li>
+                        <li><strong>Weekly Review:</strong> Which women are consistently respectful and which ones keep testing boundaries? Adjust your investment accordingly.</li>
+                    </ol>
+                </div>
+
+                <div class="implementation">
+                    <h4>Situation-Specific Applications</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>Early Dating:</strong> Use strategies 1, 2, and 4. Set communication standards, require advance notice for plans, and maintain your options until exclusivity is earned.</li>
+                        <li><strong>Established Dating:</strong> Implement strategies 3, 5, and 6. Enforce standards consistently, demand clarity about the relationship direction, and address disrespect immediately.</li>
+                        <li><strong>Long-Distance/Online:</strong> Focus on strategies 1 and 5. Don't be overly available for constant texting, and don't wait indefinitely for someone to visit or commit.</li>
+                        <li><strong>Social Circle Dating:</strong> Emphasize strategy 6. Address disrespect immediately, especially in group settings, to maintain your reputation and standards.</li>
+                        <li><strong>Workplace/Professional:</strong> Adapt strategy 3. Set professional boundaries about time, communication, and respect while maintaining career relationships.</li>
+                    </ol>
+                </div>
+
+                <div class="power-move" style="margin: 40px 0;">
+                    <p><strong>The Ultimate First Choice Test:</strong> A woman who truly wants to be with you will adjust her behavior to meet your standards. A woman who argues with your standards, makes excuses, or tries to negotiate your boundaries is telling you she's not ready to be your first choice.</p>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <h3 style="margin-bottom: 20px; font-size: 1.5em;">The 30-Day First Choice Promise</h3>
+                <p style="font-size: 1.1em;">Implement these strategies consistently for 30 days. You'll either elevate your current situation to first choice status, or you'll eliminate women who were never going to prioritize you. Either way, you win.</p>
+            </div>
+
+            <div class="section fade-in">
+                <h2>The First Choice Mindset Revolution</h2>
+
+                <div class="exclusive-content">
+                    <h3 style="color: #dc2626; font-size: 1.5em; margin-bottom: 20px;">The Internal Transformation</h3>
+                    <p style="font-size: 1.1em; line-height: 1.7;">Before you can change how others treat you, you must change how you see yourself. This isn't just about tactics - it's about fundamentally shifting your identity from "grateful for attention" to "selective about who deserves my time."</p>
+                </div>
+
+                <div class="implementation">
+                    <h4>The First Choice Identity Shift</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>Reframe Your Value:</strong> Stop thinking "I hope she likes me" and start thinking "I wonder if she's worth my time." Your attention is the prize, not something you give away freely hoping for reciprocation.</li>
+                        <li><strong>Abundance Visualization:</strong> Spend 10 minutes daily visualizing yourself with multiple high-quality options. See yourself choosing between several women who are competing for your attention and commitment.</li>
+                        <li><strong>Standards Journaling:</strong> Write down exactly what kind of treatment you deserve and will accept. Review this weekly and adjust your actions to match these standards consistently.</li>
+                        <li><strong>Success Stories Collection:</strong> Document every time a woman adjusts her behavior to meet your standards. This builds evidence that the system works and reinforces your new identity.</li>
+                        <li><strong>Value Inventory:</strong> List 20 things that make you valuable as a partner. Read this when you feel tempted to accept backup treatment. You have too much to offer to settle for scraps.</li>
+                    </ol>
+                </div>
+
+                <div class="psychology-section">
+                    <h4>🧠 The Neuroscience of Self-Respect</h4>
+                    <p>When you consistently enforce your standards, your brain releases <strong>dopamine and testosterone</strong> - the same neurochemicals associated with winning and dominance. This creates a positive feedback loop where enforcing boundaries actually makes you feel more confident and attractive.</p>
+                    <p><strong>The Confidence Cycle:</strong> Set boundary → Enforce boundary → Feel stronger → Attract better treatment → Increased confidence → Higher standards → Better results</p>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>Advanced Relationship Dynamics</h2>
+
+                <div class="implementation">
+                    <h4>Reading Female Investment Levels</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>High Investment Signals:</strong> She initiates contact regularly, suggests specific plans, introduces you to friends/family, prioritizes your time over other activities, invests effort in your interests.</li>
+                        <li><strong>Low Investment Signals:</strong> Only responds, never initiates, suggests "hanging out" without specific plans, keeps you separate from her social circle, cancels when something better comes up.</li>
+                        <li><strong>The Investment Test:</strong> Stop initiating for 3 days. High-investment women will reach out. Low-investment women will disappear, saving you time and energy.</li>
+                        <li><strong>Reciprocity Tracking:</strong> Keep mental notes of who's putting in effort. If you're always the one planning, paying, texting first, you're in backup territory.</li>
+                        <li><strong>Energy Matching:</strong> Give exactly the energy you receive. If she sends short texts, send short texts. If she's enthusiastic, match that energy.</li>
+                    </ol>
+                </div>
+
+                <div class="power-move" style="margin: 30px 0;">
+                    <p><strong>The Investment Reality Check:</strong> Ask yourself: "If I stopped putting effort into this, would it continue?" If the answer is no, you're carrying the entire interaction. That's backup behavior.</p>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>Common Backup Scenarios & Solutions</h2>
+
+                <div class="strategy">
+                    <div class="strategy-number">A</div>
+                    <h3>The "Friends With Benefits" Trap</h3>
+                    <p class="strategy-subtitle">When she wants physical intimacy without emotional commitment</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Situation</h4>
+                        <p>"I'm not ready for a relationship, but I enjoy spending time with you."</p>
+                        <p style="margin-top: 10px;">"Let's keep things casual and see what happens."</p>
+                        <p style="margin-top: 10px;">"I don't want to ruin what we have by putting labels on it."</p>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The FWB Escape Protocol</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>Clarify Your Intentions:</strong> "I'm looking for something real with someone who's excited about building it with me. If that's not what you want, that's okay, but let's be clear about where we stand."</li>
+                            <li><strong>Remove Relationship Benefits:</strong> Stop providing emotional support, constant communication, and boyfriend-level attention without girlfriend-level commitment. You're not friends with benefits - you're benefits with no friendship.</li>
+                            <li><strong>Set the Timeline:</strong> "I understand you want to keep things casual. I'm going to focus my energy on finding someone who wants what I want. When you know what you want, you know where to find me."</li>
+                            <li><strong>Walk Away Completely:</strong> Don't try to be friends. Don't try to win her over. Don't wait around hoping she'll change her mind. Move on to someone who values commitment.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">B</div>
+                    <h3>The "Busy" Excuse Pattern</h3>
+                    <p class="strategy-subtitle">When she's always too busy for you but active on social media</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Red Flags</h4>
+                        <p>She's "too busy" to text back but posts Instagram stories constantly</p>
+                        <p style="margin-top: 10px;">She can't make time for dates but has time for other social activities</p>
+                        <p style="margin-top: 10px;">She says she's swamped with work but is active on dating apps</p>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Busy Test Resolution</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>The Reality Check:</strong> "I notice you mentioned being really busy lately. I completely understand - we all have priorities. I'm going to give you space to handle everything you've got going on."</li>
+                            <li><strong>Stop Pursuing:</strong> Don't text, don't ask about her schedule, don't try to find times that work for her. If she's genuinely busy, she'll reach out when she has time.</li>
+                            <li><strong>The Social Media Test:</strong> If she's posting regularly while claiming to be too busy for you, she's not busy - you're not a priority. Accept this information and act accordingly.</li>
+                            <li><strong>Move Your Energy:</strong> Focus on women who make time for you without you having to convince them to fit you into their schedule.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="strategy">
+                    <div class="strategy-number">C</div>
+                    <h3>The "Mixed Signals" Game</h3>
+                    <p class="strategy-subtitle">Hot and cold behavior designed to keep you guessing</p>
+                    
+                    <div class="scenario-box">
+                        <h4>The Pattern</h4>
+                        <p>Amazing dates followed by days of silence</p>
+                        <p style="margin-top: 10px;">Intense conversations then short, cold responses</p>
+                        <p style="margin-top: 10px;">Plans that get made but never confirmed</p>
+                        <p style="margin-top: 10px;">Physical intimacy followed by emotional distance</p>
+                    </div>
+
+                    <div class="implementation">
+                        <h4>The Mixed Signal Solution</h4>
+                        <ol class="implementation-steps">
+                            <li><strong>Address the Pattern:</strong> "I've noticed our communication has been pretty inconsistent. Sometimes we have great conversations, sometimes I don't hear from you for days. What's going on?"</li>
+                            <li><strong>Demand Consistency:</strong> "I'm looking for consistent communication with someone I'm dating. If you need space sometimes, just let me know rather than disappearing."</li>
+                            <li><strong>Mirror Her Energy:</strong> When she goes cold, you go cold. When she's warm, you can be warm. Stop trying to win her over when she's being distant.</li>
+                            <li><strong>Set the Standard:</strong> "I prefer straightforward communication over guessing games. If you're interested in continuing this, I need you to be clear about it."</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>The 30-Day First Choice Challenge</h2>
+
+                <div class="transformation-system">
+                    <h3>Week-by-Week Transformation Plan</h3>
+                    <p style="font-size: 1.2em; text-align: center; margin-bottom: 40px; position: relative; z-index: 2;">Your complete roadmap from backup to first choice</p>
+                    
+                    <div class="system-grid">
+                        <div class="system-item">
+                            <h4>Week 1: Awareness & Assessment</h4>
+                            <p><strong>Days 1-3:</strong> Audit all your current interactions. Identify where you're being a backup plan.</p>
+                            <p><strong>Days 4-7:</strong> Implement communication windows and stop responding to late-night texts immediately. Begin the 48-hour rule for plans.</p>
+                        </div>
+                        <div class="system-item">
+                            <h4>Week 2: Standards Implementation</h4>
+                            <p><strong>Days 8-10:</strong> Define your non-negotiable standards and communicate them clearly to current dating interests.</p>
+                            <p><strong>Days 11-14:</strong> Start addressing disrespectful behavior immediately. Begin tracking who adjusts vs. who argues.</p>
+                        </div>
+                        <div class="system-item">
+                            <h4>Week 3: Option Maintenance</h4>
+                            <p><strong>Days 15-17:</strong> Resume dating other people if you've been exclusive without commitment. Rebuild your social calendar.</p>
+                            <p><strong>Days 18-21:</strong> Stop providing boyfriend benefits to women who haven't earned exclusivity. Match their investment level exactly.</p>
+                        </div>
+                        <div class="system-item">
+                            <h4>Week 4: Mastery & Refinement</h4>
+                            <p><strong>Days 22-26:</strong> Consistently enforce all boundaries. Walk away from anyone who refuses to meet your standards.</p>
+                            <p><strong>Days 27-30:</strong> Document your results. Notice the quality difference in how you're being treated. Adjust strategies as needed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation">
+                    <h4>Daily Action Items</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>Morning Mindset:</strong> Remind yourself that your time and attention are valuable. You choose who deserves them.</li>
+                        <li><strong>Communication Audit:</strong> Only check messages during designated times. Respond thoughtfully, not reactively.</li>
+                        <li><strong>Standard Enforcement:</strong> Address any disrespectful behavior immediately, no matter how small.</li>
+                        <li><strong>Energy Investment:</strong> Give your energy to activities and people that value it. Withdraw it from those who don't.</li>
+                        <li><strong>Evening Review:</strong> Did you maintain your standards today? What will you do differently tomorrow?</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>Success Indicators & Red Flags</h2>
+
+                <div class="implementation">
+                    <h4>Signs You're Becoming Her First Choice</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>Proactive Communication:</strong> She texts you first regularly and asks about your day, your plans, your thoughts.</li>
+                        <li><strong>Priority Scheduling:</strong> She adjusts her schedule to accommodate your availability, not the other way around.</li>
+                        <li><strong>Effort Investment:</strong> She puts thought into dates, remembers details about your life, and makes an effort with her appearance for you.</li>
+                        <li><strong>Integration Attempts:</strong> She wants to introduce you to friends and family, includes you in her future plans, talks about "we" instead of "I."</li>
+                        <li><strong>Respect for Standards:</strong> She adjusts her behavior when you set boundaries instead of arguing or ignoring them.</li>
+                    </ol>
+                </div>
+
+                <div class="warning-zone">
+                    <h4>Permanent Backup Status Red Flags</h4>
+                    <ul class="warning-list">
+                        <li>She only reaches out when she needs something or is bored</li>
+                        <li>She consistently chooses other activities/people over spending time with you</li>
+                        <li>She keeps your relationship separate from her social circle and family</li>
+                        <li>She argues with your standards instead of adjusting her behavior</li>
+                        <li>She says she values you but her actions consistently show the opposite</li>
+                        <li>She's still active on dating apps while expecting your exclusive attention</li>
+                        <li>She makes plans with you only when her other options fall through</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-quote fade-in">
+                "A woman who truly wants you will make room for you in her life. A woman who's using you as backup will ask you to wait while she makes room for someone else."
+            </div>
+
+            <div class="section fade-in">
+                <h2>Advanced Troubleshooting</h2>
+
+                <div class="implementation">
+                    <h4>When She Tests Your Boundaries</h4>
+                    <ol class="implementation-steps">
+                        <li><strong>The Pushback Test:</strong> "You're being too demanding" or "You're overreacting" - Response: "I'm clear about what I need to feel respected. If that doesn't work for you, that's okay, but it's not negotiable for me."</li>
+                        <li><strong>The Guilt Trip:</strong> "I thought you cared about me" - Response: "I do care, which is why I want us to treat each other well. That goes both ways."</li>
+                        <li><strong>The Comparison Game:</strong> "My ex never had these issues" - Response: "I'm not your ex. These are my standards for how I want to be treated."</li>
+                        <li><strong>The Future Promise:</strong> "I'll do better next time" - Response: "I appreciate that. I need to see consistent change in your actions, not just words."</li>
+                        <li><strong>The Disappearing Act:</strong> She goes silent when you set boundaries - Response: Let her go. If setting boundaries makes someone leave, they weren't right for you anyway.</li>
+                    </ol>
+                </div>
+
+                <div class="power-move">
+                    <p><strong>The Ultimate Boundary Test:</strong> The right woman will respect your standards and work to meet them. The wrong woman will argue with your standards and try to lower them. This tells you everything you need to know.</p>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <h3 style="margin-bottom: 20px; font-size: 1.5em;">The First Choice Guarantee</h3>
+                <p style="font-size: 1.1em;">Apply these principles consistently for 30 days. You will either:</p>
+                <p style="font-size: 1.1em; margin-top: 15px;"><strong>1.</strong> Transform your current situation into a first-choice relationship where you're truly valued and prioritized</p>
+                <p style="font-size: 1.1em; margin-top: 10px;"><strong>2.</strong> Eliminate time-wasters and backup situations, creating space for someone who will value you properly</p>
+                <p style="font-size: 1.2em; margin-top: 20px; color: #dc2626;"><strong>Either outcome is a massive win.</strong></p>
+            </div>
+
+            <div class="closer-section fade-in">
+                <h2>Your Backup Plan Days Are Over</h2>
+                <p style="font-size: 1.4em; margin-bottom: 25px; font-weight: bold; position: relative; z-index: 2;">You now have the complete system that separates men who get chosen from men who get used.</p>
+                <p style="font-size: 1.2em; margin-bottom: 25px; position: relative; z-index: 2;">While other men beg for scraps of attention and accept whatever women are willing to give, you'll demand and receive the respect and priority you deserve.</p>
+                <p style="font-size: 1.2em; margin-bottom: 25px; position: relative; z-index: 2;">This isn't about being difficult or high-maintenance. It's about knowing your worth and insisting that others recognize it too.</p>
+                <p style="font-size: 1.2em; font-style: italic; color: #dc2626; position: relative; z-index: 2;">Stop accepting backup status. Start commanding first choice treatment.</p>
+                <p style="font-size: 1em; margin-top: 30px; opacity: 0.9; position: relative; z-index: 2;">Begin with Strategy #1 tomorrow. Your future self will thank you for finally demanding what you're worth.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced animation system
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all major sections
+        document.querySelectorAll('.strategy, .implementation, .section, .transformation-system').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.strategy').forEach(strategy => {
+            strategy.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 35px 70px rgba(0,0,0,0.15)';
+            });
+            
+            strategy.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 15px 40px rgba(0,0,0,0.08)';
+            });
+        });
+    </script>
+</body>
+</html>
